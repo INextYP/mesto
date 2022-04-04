@@ -1,0 +1,5 @@
+.gallery__card-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
