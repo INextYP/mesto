@@ -24,3 +24,6 @@
 @import url(../blocks/gallery/__card-description/gallery__card-description.css);
 @import url(../blocks/gallery/__card-name/gallery__card-name.css);
 @import url(../blocks/gallery/__card-button-like/gallery__card-button-like.css);
+        /* ------- Footer ------- */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copiright/footer__copiright.css);

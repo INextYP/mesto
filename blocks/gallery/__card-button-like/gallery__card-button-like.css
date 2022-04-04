@@ -3,4 +3,15 @@
     height: 19px;
     width: 22px;
     border: none;
+    transition: opacity .7s ease-in-out;
+    cursor: pointer;
+}
+
+.gallery__card-button-like:hover {
+    opacity: .5;
+}
+
+.gallery__card-button-like:active {
+    background: url(../../../image/like-btn_active.svg) center no-repeat transparent;
+    opacity: 1;
 }
