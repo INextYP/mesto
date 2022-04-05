@@ -5,9 +5,23 @@
     border: 1px solid #fff;
     cursor: pointer;
     transition: opacity .7s ease-in-out;
-    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 .profile__edit-button:hover {
     opacity: .6;
 }
+
+@media (max-width: 930px) {
+    .profile__edit-button {
+        align-self: center;
+        margin: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .profile__edit-button {
+        height: 18px;
+        width: 18px;
+    }
+  }

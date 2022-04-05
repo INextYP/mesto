@@ -7,3 +7,10 @@
     gap: 20px 17px;
     
 }
+
+@media (max-width: 930px) {
+    .gallery__cards {
+        grid-template-columns: repeat(auto-fit, 282px);
+        justify-content: center;
+    }
+  }
