@@ -1,11 +1,12 @@
 .profile__add-button {
-    background: url(../../../image/add-btn-correct.svg) center no-repeat transparent;
+    background: url(../../../image/add__button_correct.svg) center no-repeat transparent;
     height: 50px;
     width: 150px;
     border: 2px solid #fff;
     cursor: pointer;
     transition: opacity .7s ease-in-out;
     border-radius: 2px;
+    padding: 0;
 }
 
 .profile__add-button:hover {
@@ -21,7 +22,8 @@
 
   @media (max-width: 600px) {
     .profile__add-button {
-        margin-top: 36px;
         width: 282px;
+        margin-top: 32px;
+        background: url(../../../image/add_btn_mob.svg) center no-repeat transparent;
     }
   }
