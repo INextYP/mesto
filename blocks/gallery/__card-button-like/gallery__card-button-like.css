@@ -10,8 +10,3 @@
 .gallery__card-button-like:hover {
     opacity: .5;
 }
-
-.gallery__card-button-like:active {
-    background: url(../../../image/like-btn_active.svg) center no-repeat transparent;
-    opacity: 1;
-}
