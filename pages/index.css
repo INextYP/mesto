@@ -1,13 +1,13 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/inter.css);
 @import url(../blocks/page/page.css);
-    /* ------- Header ------- */
+/* ------- Header ------- */
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link-logo/header__link-logo.css);
-    /* ------- Content ------- */
+/* ------- Content ------- */
 @import url(../blocks/content/content.css);
-    /* ------- Profile ------- */
+/* ------- Profile ------- */
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__container/profile__container.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
@@ -17,7 +17,7 @@
 @import url(../blocks/profile/__description/profile__description.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
-    /* ------- Gallery ------- */
+/* ------- Gallery ------- */
 @import url(../blocks/gallery/gallery.css);
 @import url(../blocks/gallery/__cards/gallery__cards.css);
 @import url(../blocks/gallery/__card-item/gallery__card-item.css);
@@ -27,10 +27,10 @@
 @import url(../blocks/gallery/__card-button-like/gallery__card-button-like.css);
 @import url(../blocks/gallery/__card-button-like/_active/gallery__card-button-like_active.css);
 @import url(../blocks/gallery/__delete-btn/gallery__delete-btn.css);
-        /* ------- Footer ------- */
+/* ------- Footer ------- */
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
-        /* ------- Popup ------- */
+/* ------- Popup ------- */
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
@@ -39,11 +39,16 @@
 @import url(../blocks/popup/__img/popup__img.css);
 @import url(../blocks/popup/__img-heading/popup__img-heading.css);
 
-        /* ------- Form ------- */
+/* ------- Form ------- */
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__heading/form__heading.css);
 @import url(../blocks/form/__input-container/form__input-container.css);
+@import url(../blocks/form/__field/form__field.css);
 @import url(../blocks/form/__item/form__item.css);
 @import url(../blocks/form/__item/_type/form__item_type_user-description.css);
 @import url(../blocks/form/__item/_type/form__item_type_user-name.css);
 @import url(../blocks/form/__submit-button/form__submit-button.css);
+@import url(../blocks/form/__item/_type/form__item_type_error.css);
+@import url(../blocks/form/__item-error/form__item-error.css);
+@import url(../blocks/form/__item-error/_active/form__item-error_active.css);
+@import url(../blocks/form/__submit-button/_inactive/form__submit-button_inactive.css);
