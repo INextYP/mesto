@@ -47,6 +47,9 @@ export const cardLinkInput = document.querySelector(
     ".form__item_type_card-link"
 );
 
+export const popupImageElement = document.querySelector(".popup__img");
+export const popupImageHead = document.querySelector(".popup__img-heading");
+
 export const profileEditButton = document.querySelector(
     ".profile__edit-button"
 );

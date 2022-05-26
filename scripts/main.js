@@ -1,6 +1,6 @@
-import { validationOption } from "./validate.js";
-import Validation from "./validate.js";
-import Card from "./cards.js";
+import { validationOption } from "./Validation.js";
+import Validation from "./Validation.js";
+import Card from "./Card.js";
 import {
     cardContainer,
     initialCards,
@@ -12,9 +12,25 @@ import {
     profileName,
     profileDescription,
     popupList,
+    validationSetting,
+    formCard,
+    cardNameInput,
+    cardLinkInput,
+    popupCard,
+    cardAddButton,
+    popupImage,
+    popupImageElement,
+    popupImageHead,
 } from "./utils.js";
 
-// Открытие и закрытие поп-апа
+//Включение валидации
+const popupProfileCheckValid = new Validation(validationOption, formProfile);
+popupProfileCheckValid.enableValidation();
+
+const validationCards = new Validation(validationSetting, formCard);
+validationCards.enableValidation();
+
+//Открытие и закрытие попапа
 export function openPopup(popup) {
     popup.classList.add("popup_opened");
     document.addEventListener("keydown", handlePressEscape);
@@ -33,20 +49,43 @@ function handleFormProfileSubmit(evt) {
     closePopup(popupProfile);
 }
 
-//Карточки из коробки
-initialCards.forEach((item) => {
-    const card = new Card(item.name, item.link, ".template");
-    const cardElement = card.generate();
+// Обработчик клика на карточку
+function handleCardClick(name, link) {
+    openPopup(popupImage);
+    popupImageElement.src = link;
+    popupImageHead.alt = name;
+    popupImageHead.textContent = name;
+}
 
-    cardContainer.append(cardElement);
-});
-
+// Обработчик нажатия "Escape"
 const handlePressEscape = (evt) => {
     if (evt.key === "Escape") {
         const popupCurrent = document.querySelector(".popup_opened");
         closePopup(popupCurrent);
     }
 };
+
+// Функция создания новой карточки
+function createCard(cardName, cardLink) {
+    const listItem = new Card(cardName, cardLink, ".template", handleCardClick);
+    const newCard = listItem.generate();
+    return newCard;
+}
+
+//Карточки из коробки
+initialCards.forEach((item) => {
+    cardContainer.append(createCard(item.name, item.link));
+});
+
+function handleSaveCardData(evt) {
+    evt.preventDefault();
+    const cardName = cardNameInput.value;
+    const cardLink = cardLinkInput.value;
+    cardContainer.prepend(createCard(cardName, cardLink));
+    validationCards.deactivateSubmitButton();
+    closePopup(popupCard);
+    evt.target.reset();
+}
 
 //Слушатели
 popupList.forEach((popup) => {
@@ -60,13 +99,18 @@ popupList.forEach((popup) => {
     });
 });
 
+formCard.addEventListener("submit", handleSaveCardData);
+
+cardAddButton.addEventListener("click", () => {
+    validationCards.resetValidation();
+    openPopup(popupCard);
+});
+
 formProfile.addEventListener("submit", handleFormProfileSubmit);
 
 profileEditButton.addEventListener("click", () => {
+    popupProfileCheckValid.resetValidation();
     openPopup(popupProfile);
     profileNameInput.value = profileName.textContent;
     profileJobInput.value = profileDescription.textContent;
 });
-
-const popupProfileCheckValid = new Validation(validationOption, formProfile);
-popupProfileCheckValid.enableValidation();
