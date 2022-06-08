@@ -25,7 +25,7 @@ export const initialCards = [
     },
 ];
 
-export const validationSetting = {
+export const validationOption = {
     formSelector: ".form",
     inputSelector: ".form__item",
     submitButtonSelector: ".form__submit-button",
@@ -34,26 +34,12 @@ export const validationSetting = {
     errorClass: "form__item-error_active",
 };
 
-export const popupCard = document.querySelector(".popup-card");
-export const popupImage = document.querySelector(".popup-image");
 export const cardAddButton = document.querySelector(".profile__add-button");
-
-export const cardContainer = document.querySelector(".gallery__cards");
+export const cardDefaultContainer = ".gallery__cards";
 export const formCard = document.querySelector(".form_place_card");
-export const cardNameInput = document.querySelector(
-    ".form__item_type_card-name"
-);
-export const cardLinkInput = document.querySelector(
-    ".form__item_type_card-link"
-);
-
-export const popupImageElement = document.querySelector(".popup__img");
-export const popupImageHead = document.querySelector(".popup__img-heading");
-
 export const profileEditButton = document.querySelector(
     ".profile__edit-button"
 );
-export const popupProfile = document.querySelector(".popup-profile");
 export const formProfile = document.querySelector(".form_place_profile");
 export const profileNameInput = document.querySelector(
     ".form__item_type_user-name"
@@ -61,9 +47,23 @@ export const profileNameInput = document.querySelector(
 export const profileJobInput = document.querySelector(
     ".form__item_type_user-description"
 );
-export const profileName = document.querySelector(".profile__name");
-export const profileDescription = document.querySelector(
-    ".profile__description"
-);
 
-export const popupList = document.querySelectorAll(".popup");
+// export const profileName = document.querySelector(".profile__name");
+// export const profileDescription = document.querySelector(
+//     ".profile__description"
+// );
+// export const popupList = document.querySelectorAll(".popup");
+// export const popupCard = ".popup-card";
+// export const cardTemplateDefault = ".template";
+// export const popupImage = document.querySelector(".popup-image");
+// export const popupProfile = document.querySelector(".popup-profile");
+// export const popupImageElement = document.querySelector(".popup__img");
+// export const popupImageHead = document.querySelector(".popup__img-heading");
+// export const cardNameInput = document.querySelector(
+//     ".form__item_type_card-name"
+// );
+// export const cardLinkInput = document.querySelector(
+//     ".form__item_type_card-link"
+// );
+// export const cardContainer = document.querySelector(".gallery__cards");
+// export const cardTemplateContainer = document.querySelector(".template");

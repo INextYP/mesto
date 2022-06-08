@@ -43,14 +43,14 @@
                 <h2 class="form__heading">Редактировать профиль</h2>
                 <fieldset class="form__input-container">
                     <label class="form__field">
-                        <input type="text" id="user-name-input" class="form__item form__item_type_user-name" name="name"
+                        <input type="text" id="user-name-input" class="form__item form__item_type_user-name" name="user-name-input"
                                placeholder="Имя"
                                required minlength="2" maxlength="40">
                         <span class="form__item-error user-name-input-error"></span>
                     </label>
                     <label class="form__field">
                         <input type="text" id="user-description-input"
-                               class="form__item form__item_type_user-description" name="description"
+                               class="form__item form__item_type_user-description" name="user-description-input"
                                placeholder="Подпись" required minlength="2" maxlength="200">
                         <span class="form__item-error user-description-input-error"></span>
                     </label>
@@ -102,6 +102,6 @@
         <button type="button" class="gallery__delete-btn" aria-label="Удалить"></button>
     </li>
 </template>
-<script type="module" src="./scripts/main.js"></script>
+<script type="module" src="./pages/main.js"></script>
 </body>
 </html>

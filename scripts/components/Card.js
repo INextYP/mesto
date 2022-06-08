@@ -1,7 +1,7 @@
 export default class Card {
-    constructor(name, link, cardSelector, handleCardClick) {
-        this._name = name;
-        this._link = link;
+    constructor({ data, cardSelector, handleCardClick }) {
+        this._name = data.name;
+        this._link = data.link;
         this._cardSelector = cardSelector;
         this._handleCardClick = handleCardClick;
     }
@@ -26,9 +26,7 @@ export default class Card {
 
         this._element
             .querySelector(".gallery__card-img")
-            .addEventListener("click", () => {
-                this._handleCardClick(this._name, this._link);
-            });
+            .addEventListener("click", this._handleCardClick);
     }
 
     _handleLikeCardClick(evt) {
