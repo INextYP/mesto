@@ -1,3 +1,5 @@
+// import "../pages/index.css";
+
 import Validation from "../scripts/components/Validation.js";
 import Card from "../scripts/components/Card.js";
 import {

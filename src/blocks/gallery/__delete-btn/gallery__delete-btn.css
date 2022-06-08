@@ -7,9 +7,9 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .gallery__delete-btn:hover {
-    opacity: .6;
+    opacity: 0.6;
 }

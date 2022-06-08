@@ -3,10 +3,10 @@
     height: 19px;
     width: 22px;
     border: none;
-    transition: opacity .7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
     cursor: pointer;
 }
 
 .gallery__card-button-like:hover {
-    opacity: .5;
+    opacity: 0.5;
 }
