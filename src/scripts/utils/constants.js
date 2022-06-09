@@ -47,23 +47,3 @@ export const profileNameInput = document.querySelector(
 export const profileJobInput = document.querySelector(
     ".form__item_type_user-description"
 );
-
-// export const profileName = document.querySelector(".profile__name");
-// export const profileDescription = document.querySelector(
-//     ".profile__description"
-// );
-// export const popupList = document.querySelectorAll(".popup");
-// export const popupCard = ".popup-card";
-// export const cardTemplateDefault = ".template";
-// export const popupImage = document.querySelector(".popup-image");
-// export const popupProfile = document.querySelector(".popup-profile");
-// export const popupImageElement = document.querySelector(".popup__img");
-// export const popupImageHead = document.querySelector(".popup__img-heading");
-// export const cardNameInput = document.querySelector(
-//     ".form__item_type_card-name"
-// );
-// export const cardLinkInput = document.querySelector(
-//     ".form__item_type_card-link"
-// );
-// export const cardContainer = document.querySelector(".gallery__cards");
-// export const cardTemplateContainer = document.querySelector(".template");

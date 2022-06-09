@@ -15,37 +15,43 @@ export default class Card {
         return cardElement;
     }
 
-    _setEventListeners() {
-        this._element
-            .querySelector(".gallery__card-button-like")
-            .addEventListener("click", this._handleLikeCardClick);
-
-        this._element
-            .querySelector(".gallery__delete-btn")
-            .addEventListener("click", this._handleCardDelete);
-
-        this._element
-            .querySelector(".gallery__card-img")
-            .addEventListener("click", this._handleCardClick);
-    }
-
-    _handleLikeCardClick(evt) {
-        evt.target.classList.toggle("gallery__card-button-like_active");
-    }
-
-    _handleCardDelete(evt) {
-        evt.target.closest(".gallery__card-item").remove();
-    }
-
     generate() {
         this._element = this._getElement();
+        this._cardImage = this._element.querySelector(".gallery__card-img");
+        this._cardName = this._element.querySelector(".gallery__card-name");
+        this._cardLikeButton = this._element.querySelector(
+            ".gallery__card-button-like"
+        );
+        this._cardDeleteButton = this._element.querySelector(
+            ".gallery__delete-btn"
+        );
         this._setEventListeners();
 
-        this._element.querySelector(".gallery__card-name").textContent =
-            this._name;
-        this._element.querySelector(".gallery__card-img").src = this._link;
-        this._element.querySelector(".gallery__card-img").alt = this._name;
+        this._cardName.textContent = this._name;
+        this._cardImage.src = this._link;
+        this._cardImage.alt = this._name;
 
         return this._element;
+    }
+
+    _handleLikeCardClick() {
+        this._cardLikeButton.classList.toggle(
+            "gallery__card-button-like_active"
+        );
+    }
+
+    _handleCardDelete() {
+        this._element.remove();
+        this._element = null;
+    }
+
+    _setEventListeners() {
+        this._cardLikeButton.addEventListener("click", () =>
+            this._handleLikeCardClick()
+        );
+        this._cardDeleteButton.addEventListener("click", () =>
+            this._handleCardDelete()
+        );
+        this._cardImage.addEventListener("click", this._handleCardClick);
     }
 }

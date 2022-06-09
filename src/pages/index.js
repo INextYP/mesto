@@ -45,10 +45,7 @@ validationCards.enableValidation();
 
 const popupProfileNew = new PopupWithForm(".popup-profile", {
     handleSaveFormData: (data) => {
-        userInfoValues.setUserInfo(
-            data["user-name-input"],
-            data["user-description-input"]
-        );
+        userInfoValues.setUserInfo(data["userName"], data["userDescription"]);
         popupProfileNew.close();
     },
 });
@@ -82,9 +79,10 @@ cardAddButton.addEventListener("click", () => {
 
 profileEditButton.addEventListener("click", () => {
     popupProfileCheckValid.resetValidation();
+    const { name, description } = userInfoValues.getUserInfo();
+    profileNameInput.value = name;
+    profileJobInput.value = description;
     popupProfileNew.open();
-    profileNameInput.value = userInfoValues.getUserInfo().name;
-    profileJobInput.value = userInfoValues.getUserInfo().description;
 });
 
 popupCardNew.setEventListeners();
