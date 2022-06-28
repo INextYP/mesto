@@ -6,7 +6,6 @@
   "dependencies": {
     "core-js": "^3.22.8",
     "core-js-compat": "^3.22.8"
-
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -16,6 +15,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.11",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss-loader": "^7.0.0",
@@ -25,7 +25,9 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/INextYP/mesto/issues"
-  },
-  "homepage": "https://github.com/INextYP/mesto#readme"
+  }
 }
