@@ -70,15 +70,10 @@ export default class Card {
         return this._element;
     }
 
-    // isLike() {
-    //     return this._likes.find((item) => item === this._userId);
-    // }
-
     setLikes(likeCountNew) {
         this._cardLikeButton.classList.add("gallery__card-button-like_active");
         this._likeCount.textContent = likeCountNew.length;
         this._isLiked = true;
-        // this._likes = likeCountNew;
     }
 
     unsetLikes(likeCountNew) {
@@ -87,16 +82,9 @@ export default class Card {
         );
         this._likeCount.textContent = likeCountNew.length;
         this._isLiked = false;
-        // this._likes = likeCountNew;
     }
 
-    //_handleLikeCardClick() {
-    //this._cardLikeButton.classList.toggle(
-    //"gallery__card-button-like_active"
-    //);
-    //}
-
-    handleCardDelete() {
+    handleDeleteCard() {
         this._element.remove();
         this._element = null;
     }
